@@ -28,7 +28,7 @@ class CreateCostsTable extends Migration
             $table->text('lat_add');
             $table->timestamps();
 
-            $table->foreign('id_users')->references('id')->on('users');
+            $table->foreign('id_users')->references('id_users')->on('users');
         });
     }
 
