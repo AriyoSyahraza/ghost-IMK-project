@@ -27,7 +27,7 @@ class AuthController extends Controller
 
         if (Auth::attempt($credentials)) {
             // Login berhasil
-            return redirect()->intended('/');
+            return redirect()->intended('/posts');
         } else {
             // Login gagal
             return back()->withErrors(['email' => 'Email atau password salah.']);

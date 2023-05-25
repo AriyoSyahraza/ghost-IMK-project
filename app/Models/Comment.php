@@ -4,10 +4,10 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use App\Models\Comment;
+use App\Models\Post;
 use App\Models\User;
 
-class Post extends Model
+class Comment extends Model
 {
     use HasFactory;
 
@@ -15,11 +15,12 @@ class Post extends Model
 
     public function user()
     {
-        return $this->belongsTo(User::class, 'user_id');
+        return $this->belongsTo(User::class, 'user_id', 'id_users');
     }
 
-    public function comment()
+
+    public function post()
     {
-        return $this->hasMany(Comment::class);
+        return $this->belongsTo(Post::class, 'post_id');
     }
 }
