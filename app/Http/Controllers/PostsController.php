@@ -12,6 +12,7 @@ class PostsController extends Controller
     public function index()
     {
         $posts = Post::get();
+        // dd($posts);
         return view('index', [
             "posts" => $posts,
         ]);
