@@ -33,6 +33,7 @@
     <link rel="stylesheet" href="    {{ asset('plugins/magnific-popup/magnific-popup.css') }}    ">
     <!-- manin stylesheet -->
     <link rel="stylesheet" href="    {{ asset('/css/style.css') }}    ">
+    <link rel="stylesheet" href="    {{ asset('/css/index.css') }}    ">
 </head>
 
 <body>
