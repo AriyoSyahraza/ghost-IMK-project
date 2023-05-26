@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use App\Models\Post;
 use App\Models\User;
+use App\Models\Ask;
 use Faker\Provider\Lorem;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
@@ -24,6 +25,8 @@ class DatabaseSeeder extends Seeder
             'password' => bcrypt('password'),
             'level' => 'admin'
         ]);
+
+        Ask::factory(8)->create();
 
         Post::factory(100)->create();
     }

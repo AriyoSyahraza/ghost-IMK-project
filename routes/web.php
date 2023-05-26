@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\PostsController;
+use App\Http\Controllers\FaqController;
 use Faker\Guesser\Name;
 use Illuminate\Support\Facades\Route;
 use PHPUnit\TextUI\XmlConfiguration\Groups;
@@ -30,13 +31,12 @@ Route::get('/Fashion', function () {
 //     return view('blog-single');
 // });
 
+Route::get('/help', [FaqController::class, 'index'])->name('faq.index');
+Route::get('/help/{id}', [FaqController::class, 'show'])->name('faq.show');
+
 Route::get('/', [PostsController::class, 'index'])->name('post.index');
 Route::get('post/{id}', [PostsController::class, 'show'])->name('post.show');
 Route::post('/posts/comment', [PostsController::class, 'comment'])->name('post.comment');
-
-Route::get('/help', function(){
-    return view('help');
-});
 
 //route controller utnuk auth
 use App\Http\Controllers\AuthController;
