@@ -14,8 +14,8 @@ class CreateCostsTable extends Migration
     public function up()
     {
         Schema::create('costs', function (Blueprint $table) {
-            $table->increments('id_costs');
-            $table->unsignedBigInteger('id_users');
+            $table->id();
+            $table->foreignId('id_users')->references('id')->on('users');
             $table->string('cost_name', 35);
             $table->tinyInteger('total_kamar');
             $table->enum('cost_type', ['pria', 'wanita', 'campuran']);
@@ -28,7 +28,6 @@ class CreateCostsTable extends Migration
             $table->text('lat_add');
             $table->timestamps();
 
-            $table->foreign('id_users')->references('id_users')->on('users');
         });
     }
 

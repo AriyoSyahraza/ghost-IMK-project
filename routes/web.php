@@ -4,6 +4,7 @@ use App\Http\Controllers\PostsController;
 use Faker\Guesser\Name;
 use Illuminate\Support\Facades\Route;
 use PHPUnit\TextUI\XmlConfiguration\Groups;
+use App\Http\Controllers\CostsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,9 +17,7 @@ use PHPUnit\TextUI\XmlConfiguration\Groups;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
+
 Route::get('/About', function () {
     return view('about');
 });
@@ -45,3 +44,6 @@ Route::post('/login', [AuthController::class, 'login'])->name('login.submit');
 Route::get('/Sign-Up', [AuthController::class, 'showRegistrationForm'])->name('register');
 Route::post('/Sign-Up', [AuthController::class, 'register'])->name('register.submit');
 Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
+
+//controller untuk show di halaman index
+Route::get('/', [CostsController::class, 'index']);
