@@ -24,6 +24,26 @@ class DatabaseSeeder extends Seeder
             'password' => bcrypt('password'),
             'level' => 'admin'
         ]);
+        User::create([
+            'name' => 'Uariyo',
+            'email' => 'uariyo@gmail.com',
+            'password' => bcrypt('ariyo123'),
+            'level' => 'user'
+        ]);
+
+        User::create([
+            'name' => 'Aariyo',
+            'email' => 'aariyo@gmail.com',
+            'password' => bcrypt('ariyo123'),
+            'level' => 'admin'
+        ]);
+
+        User::create([
+            'name' => 'Oariyo',
+            'email' => 'oariyo@gmail.com',
+            'password' => bcrypt('ariyo123'),
+            'level' => 'owner'
+        ]);
 
         Post::factory(100)->create();
     }
