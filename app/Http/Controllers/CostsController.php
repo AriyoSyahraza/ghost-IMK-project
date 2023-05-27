@@ -12,8 +12,13 @@ class CostsController extends Controller
     public function index()
     {
         $costs = Cost::get();
-        dd($costs);
+        
 
         return view('index', compact('costs'));
+    }
+    public function show($costName)
+    {
+        $cost = Cost::where('cost_name', str_replace('-', ' ', $costName))->firstOrFail();
+        return view('detail-cost', compact('cost'));
     }
 }

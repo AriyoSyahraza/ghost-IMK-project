@@ -97,11 +97,11 @@
 						@foreach ($costs as $cost)
 							<div class="col-lg-3 col-md-6">
 								<article class="post-grid mb-5">
-									<a class="post-thumb mb-4 d-block" href="/post/{{ $cost->id }}">
+									<a class="post-thumb mb-4 d-block" href="{{ route('costs.show', str_replace(' ', '-', $cost->cost_name)) }}">
 										<img src="images/news/f1.jpg" alt="" class="img-fluid w-100">
 									</a>
 									<span class="cat-name text-color font-extra text-sm text-uppercase letter-spacing-1">Explore</span>
-									<h3 class="post-title mt-1"><a href="/post/{{ $cost->id }}">{{ $cost->cost_name }}</a></h3>
+									<h3 class="post-title mt-1"><a href="{{ route('costs.show', str_replace(' ', '-', $cost->cost_name)) }}">{{ $cost->cost_name }}</a></h3>
 									<p class="mb-4">tipe cost : {{$cost->cost_type}}<p>
 									<p class="mb-4">alamat cost : {{$cost->cost_address}}<p>
 									<span class="text-muted letter-spacing text-uppercase font-sm">{{ $cost->created_at }}</span>

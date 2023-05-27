@@ -47,3 +47,5 @@ Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 
 //controller untuk show di halaman index
 Route::get('/', [CostsController::class, 'index']);
+Route::get('/costs/{cost}', [CostsController::class, 'show'])->name('costs.show');
+
