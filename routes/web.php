@@ -32,7 +32,7 @@ Route::get('/Fashion', function () {
 //     return view('blog-single');
 // });
 
-Route::get('/', [PostsController::class, 'index'])->name('post.index');
+Route::get('/posts', [PostsController::class, 'index'])->name('post.index');
 Route::get('post/{id}', [PostsController::class, 'show'])->name('post.show');
 Route::post('/posts/comment', [PostsController::class, 'comment'])->name('post.comment');
 

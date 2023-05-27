@@ -94,6 +94,16 @@
 			<div class="row">
 				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 					<div class="row">
+						{{-- @foreach ($posts as $post) ini kubuat comment aja supaya gak hapus bagian mu, ntar dalam halaman index ini pakai yang cost punyaku. tapi di bagian blog nanti baru yang post ini di pake di sana 
+							<div class="col-lg-3 col-md-6"> 
+								<article class="post-grid mb-5">
+									<a class="post-thumb mb-4 d-block" href="/post/{{ $post->id }}">
+										<img src="images/news/f1.jpg" alt="" class="img-fluid w-100">
+									</a>
+									<span class="cat-name text-color font-extra text-sm text-uppercase letter-spacing-1">Explore</span>
+									<h3 class="post-title mt-1"><a href="/post/{{ $post->id }}">{{ $post->title }}</a></h3>
+
+									<span class="text-muted letter-spacing text-uppercase font-sm">{{ $post->created_at }}</span> --}}
 						@foreach ($costs as $cost)
 							<div class="col-lg-3 col-md-6">
 								<article class="post-grid mb-5">

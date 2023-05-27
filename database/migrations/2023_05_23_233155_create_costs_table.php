@@ -15,7 +15,7 @@ class CreateCostsTable extends Migration
     {
         Schema::create('costs', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('id_users')->references('id')->on('users');
+            $table->foreignId('user_id')->references('id')->on('users');
             $table->string('cost_name', 35);
             $table->tinyInteger('total_kamar');
             $table->enum('cost_type', ['pria', 'wanita', 'campuran']);
