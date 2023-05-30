@@ -24,13 +24,6 @@ Route::get('/Fashion', function () {
     return view('fashion');
 });
 
-// Route::get('/Post', function () {
-//     return view('post');
-// });
-// Route::get('/Blog-Post', function () {
-//     return view('blog-single');
-// });
-
 Route::get('/help', [FaqController::class, 'index'])->name('faq.index');
 Route::get('/help/{id}', [FaqController::class, 'show'])->name('faq.show');
 
